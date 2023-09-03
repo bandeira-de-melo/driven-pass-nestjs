@@ -22,7 +22,7 @@ export class UserRepository {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} user`;
+    return this.prisma.user.findUnique({ where: { id }});
   }
 
   findOneByEmail(email: string) {

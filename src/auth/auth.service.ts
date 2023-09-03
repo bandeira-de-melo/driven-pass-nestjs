@@ -1,4 +1,4 @@
-import { ConflictException, ForbiddenException, HttpException, HttpStatus, Injectable, NotFoundException } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { SignUpDto } from './dto/signUp.dto';
 import { JwtService } from '@nestjs/jwt';
 import { UserService } from '../user/user.service';
@@ -43,5 +43,13 @@ export class AuthService {
             }
         )
         return { token };
+    }
+
+    checkToken(token: string){
+        const data = this.jwtService.verify(token, {
+            audience: this.AUDIENCE,
+            issuer: this.ISSUER
+        })
+        return data;
     }
 }
