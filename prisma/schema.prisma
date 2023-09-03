@@ -58,6 +58,7 @@ model Card {
   title String
   user User @relation(fields: [userId], references: [id])
   userId Int
+  isVirtual Boolean
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   @@map("cards")
