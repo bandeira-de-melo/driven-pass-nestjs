@@ -38,6 +38,12 @@ This applications allows the user to save their usernames, passwords and other d
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Features
+-Sing Up with cryptography
+-Sign In with JWT (Token)
+-Storage of diffent types of sensitive data divided by entity type
+-Retrievement of user sensitive data if properly authorized
+
 ## Installation
 
 ```bash
