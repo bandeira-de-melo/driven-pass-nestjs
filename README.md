@@ -23,7 +23,7 @@
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
 ![0_fgTYOB45-WdopUEW](https://github.com/bandeira-de-melo/driven-pass-nestjs/assets/83191364/ba5ea563-b3b8-4d0e-80c2-6e7fbd1cf74c)
-
+![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white)
 ## About
 
 This applications allows the user to save their usernames, passwords and other delicate information in one single platform. 
