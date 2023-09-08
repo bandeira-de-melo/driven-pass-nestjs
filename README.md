@@ -25,6 +25,11 @@
 ![0_fgTYOB45-WdopUEW](https://github.com/bandeira-de-melo/driven-pass-nestjs/assets/83191364/ba5ea563-b3b8-4d0e-80c2-6e7fbd1cf74c)
 ![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white) 
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
+![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
+![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)
+
 ## About
 
 This applications allows the user to save their usernames, passwords and other delicate information in one single platform. 
