@@ -34,10 +34,6 @@
 
 This applications allows the user to save their usernames, passwords and other delicate information in one single platform. 
 
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
 ## Features
 - Sing Up with cryptography
 - Sign In with JWT (Token)
