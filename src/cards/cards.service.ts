@@ -3,7 +3,6 @@ import {
   ForbiddenException,
   Injectable,
   NotFoundException,
-  UnauthorizedException,
 } from '@nestjs/common';
 import { UpdateCardDto } from './dto/update-card.dto';
 import { User } from '@prisma/client';
@@ -64,7 +63,7 @@ export class CardsService {
   }
 
   update(id: number, updateCardDto: UpdateCardDto) {
-    return `This action updates a #${id} Card`;
+    return this.cardsRepository.update(id, updateCardDto);
   }
 
   async remove(id: number, user: User) {
