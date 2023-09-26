@@ -1,4 +1,15 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, HttpException, HttpStatus } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  UseGuards,
+  HttpException,
+  HttpStatus,
+} from '@nestjs/common';
 import { NotesService } from './notes.service';
 import { AuthGuard } from '../guards/auth.guard';
 import { User } from '../decorators/user.decorator';
@@ -14,7 +25,7 @@ export class NotesController {
   @Post('/')
   async create(@Body() createNoteDto: CreateNoteDto, @User() user: UserPrisma) {
     await this.notesService.create(user, createNoteDto);
-    return new HttpException("Note Created", HttpStatus.CREATED);
+    return new HttpException('Note Created', HttpStatus.CREATED);
   }
 
   @Get('/')
@@ -35,6 +46,6 @@ export class NotesController {
   @Delete(':id')
   async remove(@Param('id') id: string, @User() user: UserPrisma) {
     await this.notesService.remove(+id, user);
-    return new HttpException("Note Removed Successfully.", HttpStatus.OK)
+    return new HttpException('Note Removed Successfully.', HttpStatus.OK);
   }
 }
