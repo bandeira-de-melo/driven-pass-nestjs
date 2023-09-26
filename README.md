@@ -32,13 +32,25 @@
 
 ## About
 
-This applications allows the user to save their usernames, passwords and other delicate information in one single platform. 
+This applications allows the user to store all their usernames, passwords and other delicate information in one single platform. 
 
 ## Features
 - Sing Up with cryptography
 - Sign In with JWT (Token)
 - Storage of diffent types of sensitive data divided by entity type
 - Retrievement of user sensitive data if properly authorized
+
+## Tools
+- NestJS
+- Bcrypt
+- Crypt
+- JWT
+- Typescript
+- Jest
+- Supertest
+- Typescript
+- Prima ORM
+- Postgres SQL
 
 ## Installation
 
