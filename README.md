@@ -51,6 +51,7 @@ This applications allows the user to store all their usernames, passwords and ot
 - Typescript
 - Prima ORM
 - Postgres SQL
+- Swagger
 
 ## Installation
 
