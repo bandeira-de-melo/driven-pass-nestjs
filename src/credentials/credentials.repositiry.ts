@@ -9,42 +9,43 @@ import { PrismaService } from '../prisma/prisma.service';
 export class CredentialsRepository {
   constructor(
     private readonly prisma: PrismaService,
-    private readonly cryptrService: CryptrService
-    ){}
+    private readonly cryptrService: CryptrService,
+  ) {}
 
   create(userId: number, createCredentialDto: CreateCredentialDto) {
     return this.prisma.credential.create({
-        data:{
-            ...createCredentialDto,
-            password: this.cryptrService.encrypt(createCredentialDto.password),
-            userId 
-        }
+      data: {
+        ...createCredentialDto,
+        password: this.cryptrService.encrypt(createCredentialDto.password),
+        userId,
+      },
     });
   }
 
-  
-
   async findAll(userId: number) {
-    return await this.prisma.credential.findMany({ where:{ userId } });
+    return await this.prisma.credential.findMany({ where: { userId } });
   }
 
   async findOne(id: number) {
-    return await this.prisma.credential.findUnique({ where: { id }});
+    return await this.prisma.credential.findUnique({ where: { id } });
   }
 
   findOneWhitTitle(userId: number, title: string) {
     return this.prisma.credential.findUnique({
-        where: {
-         title_userId: {
-            userId,
-            title,
-         }   
-        }
+      where: {
+        title_userId: {
+          userId,
+          title,
+        },
+      },
     });
   }
 
   update(id: number, updateCredentialDto: UpdateCredentialDto) {
-    return `This action updates a #${id} credential`;
+    return this.prisma.credential.update({
+      where: { id },
+      data: updateCredentialDto,
+    });
   }
 
   remove(id: number) {
